@@ -16,7 +16,6 @@ logging.level:
 
 
 
-
 #spring:
 #  profiles.active: dev
 #  jpa:
