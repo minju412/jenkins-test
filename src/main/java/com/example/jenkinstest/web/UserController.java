@@ -1,7 +1,7 @@
 package com.example.jenkinstest.web;
 
 import com.example.jenkinstest.domain.Response;
-import com.example.jenkinstest.domain.User;
+import com.example.jenkinstest.domain.dasibom.Member;
 import com.example.jenkinstest.domain.UserSaveReqDto;
 import com.example.jenkinstest.service.UserService;
 import java.util.List;
@@ -29,7 +29,7 @@ public class UserController {
 
     // 회원 리스트 조회
     @GetMapping("/list")
-    public List<User> getAllUsers() {
+    public List<Member> getAllUsers() {
         return userService.getAllUsers();
     }
 }

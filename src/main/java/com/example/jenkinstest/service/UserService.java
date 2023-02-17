@@ -1,13 +1,13 @@
 package com.example.jenkinstest.service;
 
-import com.example.jenkinstest.domain.User;
+import com.example.jenkinstest.domain.dasibom.Member;
 import com.example.jenkinstest.domain.UserSaveReqDto;
 import java.util.List;
 
 public interface UserService {
 
-    List<User> getAllUsers();
+    List<Member> getAllUsers();
 
-    User saveUser(UserSaveReqDto requestDto);
+    Member saveUser(UserSaveReqDto requestDto);
 
 }

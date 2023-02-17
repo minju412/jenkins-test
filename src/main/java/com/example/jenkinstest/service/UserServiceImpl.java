@@ -1,6 +1,6 @@
 package com.example.jenkinstest.service;
 
-import com.example.jenkinstest.domain.User;
+import com.example.jenkinstest.domain.dasibom.Member;
 import com.example.jenkinstest.domain.UserSaveReqDto;
 import com.example.jenkinstest.repository.UserRepository;
 import java.util.List;
@@ -16,14 +16,14 @@ public class UserServiceImpl implements UserService {
 
     @Override
     @Transactional
-    public List<User> getAllUsers() {
+    public List<Member> getAllUsers() {
         return userRepository.findAll();
     }
 
     @Override
     @Transactional
-    public User saveUser(UserSaveReqDto requestDto) {
-        User user = User.createUser(requestDto.getUsername(), requestDto.getPassword());
+    public Member saveUser(UserSaveReqDto requestDto) {
+        Member user = Member.createUser(requestDto.getUsername(), requestDto.getPassword());
         userRepository.save(user);
         return user;
     }
