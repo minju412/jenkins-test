@@ -48,11 +48,11 @@ public class Diary {
     @Enumerated(EnumType.STRING)
     private List<DiaryStamp> stamps;
 
-    @Temporal(TemporalType.TIMESTAMP)
+//    @Temporal(TemporalType.TIMESTAMP)
     @CreationTimestamp
     private LocalDate createdAt;
 
-    @Temporal(TemporalType.TIMESTAMP)
+//    @Temporal(TemporalType.TIMESTAMP)
     @UpdateTimestamp
     private LocalDate updatedAt;
 }
