@@ -1,4 +1,4 @@
-package com.example.jenkinstest.domain.dasibom;
+package com.example.jenkinstest.dasibom.domain;
 
 import javax.persistence.Column;
 import javax.persistence.Entity;

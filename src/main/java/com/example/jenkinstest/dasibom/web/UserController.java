@@ -1,9 +1,9 @@
-package com.example.jenkinstest.web;
+package com.example.jenkinstest.dasibom.web;
 
-import com.example.jenkinstest.domain.Response;
-import com.example.jenkinstest.domain.dasibom.Member;
-import com.example.jenkinstest.domain.UserSaveReqDto;
-import com.example.jenkinstest.service.UserService;
+import com.example.jenkinstest.dasibom.domain.Response;
+import com.example.jenkinstest.dasibom.domain.UserSaveReqDto;
+import com.example.jenkinstest.dasibom.domain.User;
+import com.example.jenkinstest.dasibom.service.UserService;
 import java.util.List;
 import javax.validation.Valid;
 import lombok.RequiredArgsConstructor;
@@ -29,7 +29,7 @@ public class UserController {
 
     // 회원 리스트 조회
     @GetMapping("/list")
-    public List<Member> getAllUsers() {
+    public List<User> getAllUsers() {
         return userService.getAllUsers();
     }
 }

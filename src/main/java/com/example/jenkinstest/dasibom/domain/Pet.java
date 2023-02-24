@@ -1,4 +1,4 @@
-package com.example.jenkinstest.domain.dasibom;
+package com.example.jenkinstest.dasibom.domain;
 
 import java.time.LocalDate;
 
@@ -26,7 +26,7 @@ public class Pet {
 
     @ManyToOne(fetch = FetchType.LAZY)
     @JoinColumn(name = "memberId")
-    private Member owner;
+    private User owner;
 
     private String petName;
 

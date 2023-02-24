@@ -1,4 +1,4 @@
-package com.example.jenkinstest.domain;
+package com.example.jenkinstest.dasibom.domain;
 
 import lombok.AllArgsConstructor;
 import lombok.Getter;

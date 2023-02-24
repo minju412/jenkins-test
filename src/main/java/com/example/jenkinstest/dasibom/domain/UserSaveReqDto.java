@@ -1,4 +1,4 @@
-package com.example.jenkinstest.domain;
+package com.example.jenkinstest.dasibom.domain;
 
 import javax.validation.constraints.NotBlank;
 import javax.validation.constraints.NotNull;

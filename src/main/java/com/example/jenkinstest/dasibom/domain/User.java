@@ -1,4 +1,4 @@
-package com.example.jenkinstest.domain.dasibom;
+package com.example.jenkinstest.dasibom.domain;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -17,7 +17,7 @@ import lombok.Setter;
 @Getter
 @Setter
 @NoArgsConstructor
-public class Member {
+public class User {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -34,8 +34,8 @@ public class Member {
     @OneToMany(mappedBy = "owner", cascade = CascadeType.ALL)
     private List<Pet> petList = new ArrayList<>();
 
-    public static Member createUser(String username, String password) {
-        Member user = new Member();
+    public static User createUser(String username, String password) {
+        User user = new User();
         user.setUsername(username);
         user.setPassword(password);
         return user;
