@@ -1,5 +1,6 @@
 echo "jar 파일 생성"
-./gradlew build jar -x test
+./gradlew build jar
+#./gradlew build jar -x test
 
 echo "도커 이미지 빌드"
 docker-compose build --no-cache

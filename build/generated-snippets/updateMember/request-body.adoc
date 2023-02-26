@@ -1,0 +1,4 @@
+[source,options="nowrap"]
+----
+{"grade":"senior","year":7}
+----

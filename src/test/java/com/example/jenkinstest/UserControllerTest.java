@@ -1,4 +1,4 @@
-package com.example.jenkinstest.web;
+package com.example.jenkinstest;
 
 import static org.hamcrest.Matchers.is;
 import static org.springframework.restdocs.mockmvc.MockMvcRestDocumentation.document;
@@ -28,11 +28,9 @@ import org.springframework.http.HttpHeaders;
 import org.springframework.http.MediaType;
 import org.springframework.test.context.ActiveProfiles;
 import org.springframework.test.web.servlet.MockMvc;
-import org.testcontainers.junit.jupiter.Testcontainers;
 
-@Testcontainers // TestContainer
-@ActiveProfiles("junit-test") // TestContainer
-@AutoConfigureRestDocs // Spring REST Docs 자동 설정 어노테이션
+@ActiveProfiles("test")
+@AutoConfigureRestDocs //Spring REST Docs 자동 설정 어노테이션
 @AutoConfigureMockMvc
 @SpringBootTest
 @TestMethodOrder(MethodOrderer.OrderAnnotation.class)
@@ -45,6 +43,11 @@ class UserControllerTest {
      *  4. member 삭제
      *  5. member 전체 조회
      * */
+
+//    private static final String MYSQL_VERSION = "mysql:8";
+//
+//    @Container
+//    public static final MySQLContainer<?> MYSQL_CONTAINER = new MySQLContainer<>(MYSQL_VERSION);
 
     @Autowired
     private MockMvc mockMvc;

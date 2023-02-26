@@ -2,7 +2,7 @@ plugins {
 	id 'java'
 	id 'org.springframework.boot' version '2.7.8'
 	id 'io.spring.dependency-management' version '1.0.15.RELEASE'
-	id 'org.asciidoctor.jvm.convert' version '3.3.2' //asciidoctor plugin 추가
+	id 'org.asciidoctor.jvm.convert' version '3.3.2' // asciidoctor plugin 추가 (1)
 }
 
 group = 'com.example'
@@ -19,31 +19,33 @@ repositories {
 	mavenCentral()
 }
 
-////// 추가 시작 //////
 ext{
-	snippetDir = file('build/generated-snippets') //snippets 파일을 저장할 디렉토리 생성
+	snippetDir = file('build/generated-snippets') // snippets 파일을 저장할 디렉토리 생성 (2)
 }
 
 test {
 	useJUnitPlatform()
-	outputs.dir snippetDir //생성된 파일을 미리 생성한 디렉토리(build/generated-snippets)에 저장
-}
-////// 추가 끝 //////
-
-////// 추가 시작 //////
-asciidoctor{ //asciidoctor 설정 task
-	inputs.dir snippetDir //snippets 디렉토리를 입력으로 함
-	dependsOn test // test task를 의존하도록 하여, 문서 생성 전에 test를 수행하도록 함
+	outputs.dir snippetDir // 생성된 파일을 미리 생성한 디렉토리(build/generated-snippets)에 저장 (3)
 }
 
-bootJar{ //springboot를 이용한 jar 파일 생성 시 필요한 설정 task
-	dependsOn asciidoctor //asciidoctor 를 의존하도록 하여, bootJar 생성 전에 asciidoctor task를 수행하도록 함
+asciidoctor{ // asciidoctor 설정 task
+	inputs.dir snippetDir // snippets 디렉토리를 입력으로 함 (4)
+	dependsOn test // test task를 의존하도록 하여, 문서 생성 전에 test를 수행하도록 함 (5)
+}
+
+bootJar{ // springboot를 이용한 jar 파일 생성 시 필요한 설정 task
+	dependsOn asciidoctor // asciidoctor 를 의존하도록 하여, bootJar 생성 전에 asciidoctor task를 수행하도록 함
 	// (jar 파일 생성 시, 문서 생성을 보장 함)
-	from("src/docs/asciidoc"){ //문서 생성 시, Jar 파일 내 static/docs 에도 복사되도록 함
+	from("src/docs/asciidoc"){ // 문서 생성 시, Jar 파일 내 static/docs 에도 복사되도록 함
 		into 'BOOT-INF/classes/static/docs'
 	}
+
+	// index 페이지를 노출하기 위해 설정
+	copy {
+		from asciidoctor.outputDir
+		into "src/main/resources/static/docs"
+	}
 }
-////// 추가 끝 //////
 
 dependencies {
 	implementation 'org.springframework.boot:spring-boot-starter-data-jpa'
@@ -54,10 +56,21 @@ dependencies {
 	annotationProcessor 'org.projectlombok:lombok'
 	testImplementation 'org.springframework.boot:spring-boot-starter-test'
 
-	//spring rest docs 을 이용하기 위한 라이브러리
+	// spring rest docs 을 이용하기 위한 라이브러리
 	testImplementation 'org.springframework.restdocs:spring-restdocs-mockmvc'
+
+	// testContainer 사용
+	testImplementation "org.testcontainers:testcontainers:1.15.3"
+	testImplementation "org.testcontainers:junit-jupiter:1.15.3"
+	testImplementation "org.testcontainers:mysql:1.15.3"
+
+	// mockmvc
+	testImplementation 'org.springframework.restdocs:spring-restdocs-mockmvc' // (6)
+
+	// H2
+	implementation 'com.h2database:h2:1.4.199'
 }
 
-tasks.named('test') {
-	useJUnitPlatform()
-}
+//tasks.named('test') {
+//	useJUnitPlatform()
+//}

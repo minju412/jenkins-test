@@ -1,0 +1,4 @@
+[source,options="nowrap"]
+----
+[{"name":"john","grade":"senior","year":7},{"name":"jessi","grade":"junior","year":2}]
+----
