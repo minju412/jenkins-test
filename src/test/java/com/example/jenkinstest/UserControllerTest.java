@@ -26,10 +26,13 @@ import org.springframework.boot.test.autoconfigure.web.servlet.AutoConfigureMock
 import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.http.HttpHeaders;
 import org.springframework.http.MediaType;
+import org.springframework.test.context.ActiveProfiles;
 import org.springframework.test.web.servlet.MockMvc;
+import org.testcontainers.junit.jupiter.Testcontainers;
 
-
-@AutoConfigureRestDocs //Spring REST Docs 자동 설정 어노테이션
+@Testcontainers // TestContainer
+@ActiveProfiles("junit-test") // TestContainer
+@AutoConfigureRestDocs // Spring REST Docs 자동 설정 어노테이션
 @AutoConfigureMockMvc
 @SpringBootTest
 @TestMethodOrder(MethodOrderer.OrderAnnotation.class)
