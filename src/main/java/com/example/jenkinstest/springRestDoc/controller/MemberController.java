@@ -28,27 +28,27 @@ public class MemberController {
      * */
 
     @GetMapping("/member/{name}")
-    public Response getMember(@PathVariable String name){
+    public Response getMember(@PathVariable String name) {
         return memberService.getMember(name);
     }
 
     @PostMapping("/member")
-    public void createMember(@RequestBody CreateRequest request){
+    public void createMember(@RequestBody CreateRequest request) {
         memberService.createMember(request);
     }
 
     @PutMapping("/member/{name}")
-    public Response updateMember(@RequestBody UpdateRequest request, @PathVariable String name){
+    public Response updateMember(@RequestBody UpdateRequest request, @PathVariable String name) {
         return memberService.updateMember(request, name);
     }
 
     @DeleteMapping("/member/{name}")
-    public Response deleteMember(@PathVariable String name){
+    public Response deleteMember(@PathVariable String name) {
         return memberService.deleteMember(name);
     }
 
     @GetMapping("/members")
-    public List<Response> getAllMember(){
+    public List<Response> getAllMember() {
         return memberService.getAllMember();
     }
 
