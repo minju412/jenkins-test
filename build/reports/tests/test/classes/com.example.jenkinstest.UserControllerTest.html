@@ -41,7 +41,7 @@
 </td>
 <td>
 <div class="infoBox" id="duration">
-<div class="counter">0.307s</div>
+<div class="counter">0.417s</div>
 <p>duration</p>
 </div>
 </td>
@@ -79,27 +79,27 @@
 </thead>
 <tr>
 <td class="success">createMemberTest()</td>
-<td class="success">0.029s</td>
+<td class="success">0.064s</td>
 <td class="success">passed</td>
 </tr>
 <tr>
 <td class="success">deleteMemberTest()</td>
-<td class="success">0.012s</td>
+<td class="success">0.030s</td>
 <td class="success">passed</td>
 </tr>
 <tr>
 <td class="success">getAllMemberTest()</td>
-<td class="success">0.011s</td>
+<td class="success">0.023s</td>
 <td class="success">passed</td>
 </tr>
 <tr>
 <td class="success">getMemberTest()</td>
-<td class="success">0.240s</td>
+<td class="success">0.266s</td>
 <td class="success">passed</td>
 </tr>
 <tr>
 <td class="success">updateMemberTest()</td>
-<td class="success">0.015s</td>
+<td class="success">0.034s</td>
 <td class="success">passed</td>
 </tr>
 </table>
@@ -107,12 +107,19 @@
 <div id="tab1" class="tab">
 <h2>Standard output</h2>
 <span class="code">
-<pre>2023-02-26 23:42:49.161  INFO 73544 --- [    Test worker] .b.t.c.SpringBootTestContextBootstrapper : Neither @ContextConfiguration nor @ContextHierarchy found for test class [com.example.jenkinstest.UserControllerTest], using SpringBootContextLoader
-2023-02-26 23:42:49.162  INFO 73544 --- [    Test worker] o.s.t.c.support.AbstractContextLoader    : Could not detect default resource locations for test class [com.example.jenkinstest.UserControllerTest]: no resource found for suffixes {-context.xml, Context.groovy}.
-2023-02-26 23:42:49.162  INFO 73544 --- [    Test worker] t.c.s.AnnotationConfigContextLoaderUtils : Could not detect default configuration classes for test class [com.example.jenkinstest.UserControllerTest]: UserControllerTest does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
-2023-02-26 23:42:49.167  INFO 73544 --- [    Test worker] .b.t.c.SpringBootTestContextBootstrapper : Found @SpringBootConfiguration com.example.jenkinstest.JenkinsTestApplication for test class com.example.jenkinstest.UserControllerTest
-2023-02-26 23:42:49.168  INFO 73544 --- [    Test worker] .b.t.c.SpringBootTestContextBootstrapper : Loaded default TestExecutionListener class names from location [META-INF/spring.factories]: [org.springframework.boot.test.autoconfigure.restdocs.RestDocsTestExecutionListener, org.springframework.boot.test.autoconfigure.web.client.MockRestServiceServerResetTestExecutionListener, org.springframework.boot.test.autoconfigure.web.servlet.MockMvcPrintOnlyOnFailureTestExecutionListener, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverTestExecutionListener, org.springframework.boot.test.autoconfigure.webservices.client.MockWebServiceServerTestExecutionListener, org.springframework.boot.test.mock.mockito.MockitoTestExecutionListener, org.springframework.boot.test.mock.mockito.ResetMocksTestExecutionListener, org.springframework.test.context.web.ServletTestExecutionListener, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener, org.springframework.test.context.event.ApplicationEventsTestExecutionListener, org.springframework.test.context.support.DependencyInjectionTestExecutionListener, org.springframework.test.context.support.DirtiesContextTestExecutionListener, org.springframework.test.context.transaction.TransactionalTestExecutionListener, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener, org.springframework.test.context.event.EventPublishingTestExecutionListener]
-2023-02-26 23:42:49.168  INFO 73544 --- [    Test worker] .b.t.c.SpringBootTestContextBootstrapper : Using TestExecutionListeners: [org.springframework.test.context.web.ServletTestExecutionListener@6bf34912, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener@1bcdd302, org.springframework.test.context.event.ApplicationEventsTestExecutionListener@648f48d3, org.springframework.boot.test.mock.mockito.MockitoTestExecutionListener@30ce78e3, org.springframework.boot.test.autoconfigure.SpringBootDependencyInjectionTestExecutionListener@41041c31, org.springframework.test.context.support.DirtiesContextTestExecutionListener@34a482d0, org.springframework.test.context.transaction.TransactionalTestExecutionListener@2a738d47, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener@6939f18a, org.springframework.test.context.event.EventPublishingTestExecutionListener@8bd9d08, org.springframework.boot.test.autoconfigure.restdocs.RestDocsTestExecutionListener@189f3ccd, org.springframework.boot.test.autoconfigure.web.client.MockRestServiceServerResetTestExecutionListener@2eb0932c, org.springframework.boot.test.autoconfigure.web.servlet.MockMvcPrintOnlyOnFailureTestExecutionListener@82382d1, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverTestExecutionListener@6c120b00, org.springframework.boot.test.autoconfigure.webservices.client.MockWebServiceServerTestExecutionListener@d8a2b1b, org.springframework.boot.test.mock.mockito.ResetMocksTestExecutionListener@2709e075]
+<pre>11:04:19.385 [Test worker] DEBUG org.springframework.test.context.BootstrapUtils - Instantiating CacheAwareContextLoaderDelegate from class [org.springframework.test.context.cache.DefaultCacheAwareContextLoaderDelegate]
+11:04:19.395 [Test worker] DEBUG org.springframework.test.context.BootstrapUtils - Instantiating BootstrapContext using constructor [public org.springframework.test.context.support.DefaultBootstrapContext(java.lang.Class,org.springframework.test.context.CacheAwareContextLoaderDelegate)]
+11:04:19.410 [Test worker] DEBUG org.springframework.test.context.BootstrapUtils - Instantiating TestContextBootstrapper for test class [com.example.jenkinstest.UserControllerTest] from class [org.springframework.boot.test.context.SpringBootTestContextBootstrapper]
+11:04:19.418 [Test worker] INFO org.springframework.boot.test.context.SpringBootTestContextBootstrapper - Neither @ContextConfiguration nor @ContextHierarchy found for test class [com.example.jenkinstest.UserControllerTest], using SpringBootContextLoader
+11:04:19.421 [Test worker] DEBUG org.springframework.test.context.support.AbstractContextLoader - Did not detect default resource location for test class [com.example.jenkinstest.UserControllerTest]: class path resource [com/example/jenkinstest/UserControllerTest-context.xml] does not exist
+11:04:19.421 [Test worker] DEBUG org.springframework.test.context.support.AbstractContextLoader - Did not detect default resource location for test class [com.example.jenkinstest.UserControllerTest]: class path resource [com/example/jenkinstest/UserControllerTestContext.groovy] does not exist
+11:04:19.421 [Test worker] INFO org.springframework.test.context.support.AbstractContextLoader - Could not detect default resource locations for test class [com.example.jenkinstest.UserControllerTest]: no resource found for suffixes {-context.xml, Context.groovy}.
+11:04:19.422 [Test worker] INFO org.springframework.test.context.support.AnnotationConfigContextLoaderUtils - Could not detect default configuration classes for test class [com.example.jenkinstest.UserControllerTest]: UserControllerTest does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
+11:04:19.492 [Test worker] DEBUG org.springframework.context.annotation.ClassPathScanningCandidateComponentProvider - Identified candidate component class: file [/Users/minju/study/jenkins/jenkins-test/build/classes/java/main/com/example/jenkinstest/JenkinsTestApplication.class]
+11:04:19.493 [Test worker] INFO org.springframework.boot.test.context.SpringBootTestContextBootstrapper - Found @SpringBootConfiguration com.example.jenkinstest.JenkinsTestApplication for test class com.example.jenkinstest.UserControllerTest
+11:04:19.550 [Test worker] DEBUG org.springframework.boot.test.context.SpringBootTestContextBootstrapper - @TestExecutionListeners is not present for class [com.example.jenkinstest.UserControllerTest]: using defaults.
+11:04:19.551 [Test worker] INFO org.springframework.boot.test.context.SpringBootTestContextBootstrapper - Loaded default TestExecutionListener class names from location [META-INF/spring.factories]: [org.springframework.boot.test.autoconfigure.restdocs.RestDocsTestExecutionListener, org.springframework.boot.test.autoconfigure.web.client.MockRestServiceServerResetTestExecutionListener, org.springframework.boot.test.autoconfigure.web.servlet.MockMvcPrintOnlyOnFailureTestExecutionListener, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverTestExecutionListener, org.springframework.boot.test.autoconfigure.webservices.client.MockWebServiceServerTestExecutionListener, org.springframework.boot.test.mock.mockito.MockitoTestExecutionListener, org.springframework.boot.test.mock.mockito.ResetMocksTestExecutionListener, org.springframework.test.context.web.ServletTestExecutionListener, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener, org.springframework.test.context.event.ApplicationEventsTestExecutionListener, org.springframework.test.context.support.DependencyInjectionTestExecutionListener, org.springframework.test.context.support.DirtiesContextTestExecutionListener, org.springframework.test.context.transaction.TransactionalTestExecutionListener, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener, org.springframework.test.context.event.EventPublishingTestExecutionListener]
+11:04:19.559 [Test worker] INFO org.springframework.boot.test.context.SpringBootTestContextBootstrapper - Using TestExecutionListeners: [org.springframework.test.context.web.ServletTestExecutionListener@54336c81, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener@1556f2dd, org.springframework.test.context.event.ApplicationEventsTestExecutionListener@35e52059, org.springframework.boot.test.mock.mockito.MockitoTestExecutionListener@62577d6, org.springframework.boot.test.autoconfigure.SpringBootDependencyInjectionTestExecutionListener@49bd54f7, org.springframework.test.context.support.DirtiesContextTestExecutionListener@6b5f8707, org.springframework.test.context.transaction.TransactionalTestExecutionListener@772485dd, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener@5a12c728, org.springframework.test.context.event.EventPublishingTestExecutionListener@79ab3a71, org.springframework.boot.test.autoconfigure.restdocs.RestDocsTestExecutionListener@6e5bfdfc, org.springframework.boot.test.autoconfigure.web.client.MockRestServiceServerResetTestExecutionListener@3d829787, org.springframework.boot.test.autoconfigure.web.servlet.MockMvcPrintOnlyOnFailureTestExecutionListener@71652c98, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverTestExecutionListener@51bde877, org.springframework.boot.test.autoconfigure.webservices.client.MockWebServiceServerTestExecutionListener@60b85ba1, org.springframework.boot.test.mock.mockito.ResetMocksTestExecutionListener@492fc69e]
 
   .   ____          _            __ _ _
  /\\ / ___'_ __ _ _(_)_ __  __ _ \ \ \ \
@@ -122,15 +129,17 @@
  =========|_|==============|___/=/_/_/_/
  :: Spring Boot ::                (v2.7.8)
 
-2023-02-26 23:42:49.185  INFO 73544 --- [    Test worker] c.e.jenkinstest.UserControllerTest       : Starting UserControllerTest using Java 11.0.14.1 on choeminjuui-MacBookAir.local with PID 73544 (started by minju in /Users/minju/study/jenkins/jenkins-test)
-2023-02-26 23:42:49.186  INFO 73544 --- [    Test worker] c.e.jenkinstest.UserControllerTest       : The following 1 profile is active: &quot;test&quot;
-2023-02-26 23:42:49.252  INFO 73544 --- [    Test worker] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
-2023-02-26 23:42:49.256  INFO 73544 --- [    Test worker] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 4 ms. Found 2 JPA repository interfaces.
-2023-02-26 23:42:49.317  INFO 73544 --- [    Test worker] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
-2023-02-26 23:42:49.320  INFO 73544 --- [    Test worker] com.zaxxer.hikari.HikariDataSource       : HikariPool-2 - Starting...
-2023-02-26 23:42:49.322  INFO 73544 --- [    Test worker] com.zaxxer.hikari.HikariDataSource       : HikariPool-2 - Start completed.
-2023-02-26 23:42:49.322  INFO 73544 --- [    Test worker] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.MySQL8Dialect
-2023-02-26 23:42:49.358 DEBUG 73544 --- [    Test worker] org.hibernate.SQL                        : 
+2023-03-20 11:04:19.860  INFO 77266 --- [    Test worker] c.e.jenkinstest.UserControllerTest       : Starting UserControllerTest using Java 11.0.14.1 on choeminjuui-MacBookAir.local with PID 77266 (started by minju in /Users/minju/study/jenkins/jenkins-test)
+2023-03-20 11:04:19.861  INFO 77266 --- [    Test worker] c.e.jenkinstest.UserControllerTest       : The following 1 profile is active: &quot;test&quot;
+2023-03-20 11:04:20.300  INFO 77266 --- [    Test worker] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2023-03-20 11:04:20.328  INFO 77266 --- [    Test worker] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 23 ms. Found 2 JPA repository interfaces.
+2023-03-20 11:04:20.615  INFO 77266 --- [    Test worker] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2023-03-20 11:04:20.648  INFO 77266 --- [    Test worker] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 5.6.14.Final
+2023-03-20 11:04:20.785  INFO 77266 --- [    Test worker] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+2023-03-20 11:04:20.853  INFO 77266 --- [    Test worker] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2023-03-20 11:04:20.960  INFO 77266 --- [    Test worker] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2023-03-20 11:04:20.977  INFO 77266 --- [    Test worker] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.MySQL8Dialect
+2023-03-20 11:04:21.420 DEBUG 77266 --- [    Test worker] org.hibernate.SQL                        : 
     
     alter table `tb_diary` 
        drop 
@@ -140,7 +149,7 @@ Hibernate:
     alter table `tb_diary` 
        drop 
        foreign key `FKiwhbik4vl1tgregne3nwrjs46`
-2023-02-26 23:42:49.362  WARN 73544 --- [    Test worker] o.h.t.s.i.ExceptionHandlerLoggedImpl     : GenerationTarget encountered exception accepting command : Error executing DDL &quot;
+2023-03-20 11:04:21.426  WARN 77266 --- [    Test worker] o.h.t.s.i.ExceptionHandlerLoggedImpl     : GenerationTarget encountered exception accepting command : Error executing DDL &quot;
     alter table `tb_diary` 
        drop 
        foreign key `FKiwhbik4vl1tgregne3nwrjs46`&quot; via JDBC Statement
@@ -291,7 +300,7 @@ Caused by: org.h2.jdbc.JdbcSQLSyntaxErrorException: Table &quot;TB_DIARY&quot; n
 	at org.hibernate.tool.schema.internal.exec.GenerationTargetToDatabase.accept(GenerationTargetToDatabase.java:54) ~[hibernate-core-5.6.14.Final.jar:5.6.14.Final]
 	... 114 common frames omitted
 
-2023-02-26 23:42:49.363 DEBUG 73544 --- [    Test worker] org.hibernate.SQL                        : 
+2023-03-20 11:04:21.429 DEBUG 77266 --- [    Test worker] org.hibernate.SQL                        : 
     
     alter table `tb_diary` 
        drop 
@@ -301,7 +310,7 @@ Hibernate:
     alter table `tb_diary` 
        drop 
        foreign key `FKqdly2nrm5yggn93xti638jrc0`
-2023-02-26 23:42:49.365  WARN 73544 --- [    Test worker] o.h.t.s.i.ExceptionHandlerLoggedImpl     : GenerationTarget encountered exception accepting command : Error executing DDL &quot;
+2023-03-20 11:04:21.432  WARN 77266 --- [    Test worker] o.h.t.s.i.ExceptionHandlerLoggedImpl     : GenerationTarget encountered exception accepting command : Error executing DDL &quot;
     alter table `tb_diary` 
        drop 
        foreign key `FKqdly2nrm5yggn93xti638jrc0`&quot; via JDBC Statement
@@ -452,7 +461,7 @@ Caused by: org.h2.jdbc.JdbcSQLSyntaxErrorException: Table &quot;TB_DIARY&quot; n
 	at org.hibernate.tool.schema.internal.exec.GenerationTargetToDatabase.accept(GenerationTargetToDatabase.java:54) ~[hibernate-core-5.6.14.Final.jar:5.6.14.Final]
 	... 114 common frames omitted
 
-2023-02-26 23:42:49.367 DEBUG 73544 --- [    Test worker] org.hibernate.SQL                        : 
+2023-03-20 11:04:21.435 DEBUG 77266 --- [    Test worker] org.hibernate.SQL                        : 
     
     alter table `tb_diary_stamp` 
        drop 
@@ -462,7 +471,7 @@ Hibernate:
     alter table `tb_diary_stamp` 
        drop 
        foreign key `FKrmkuol08tw5hvywpu3kh98yk2`
-2023-02-26 23:42:49.369  WARN 73544 --- [    Test worker] o.h.t.s.i.ExceptionHandlerLoggedImpl     : GenerationTarget encountered exception accepting command : Error executing DDL &quot;
+2023-03-20 11:04:21.439  WARN 77266 --- [    Test worker] o.h.t.s.i.ExceptionHandlerLoggedImpl     : GenerationTarget encountered exception accepting command : Error executing DDL &quot;
     alter table `tb_diary_stamp` 
        drop 
        foreign key `FKrmkuol08tw5hvywpu3kh98yk2`&quot; via JDBC Statement
@@ -613,7 +622,7 @@ Caused by: org.h2.jdbc.JdbcSQLSyntaxErrorException: Table &quot;TB_DIARY_STAMP&q
 	at org.hibernate.tool.schema.internal.exec.GenerationTargetToDatabase.accept(GenerationTargetToDatabase.java:54) ~[hibernate-core-5.6.14.Final.jar:5.6.14.Final]
 	... 114 common frames omitted
 
-2023-02-26 23:42:49.371 DEBUG 73544 --- [    Test worker] org.hibernate.SQL                        : 
+2023-03-20 11:04:21.442 DEBUG 77266 --- [    Test worker] org.hibernate.SQL                        : 
     
     alter table `tb_diary_stamp` 
        drop 
@@ -623,7 +632,7 @@ Hibernate:
     alter table `tb_diary_stamp` 
        drop 
        foreign key `FKqd0450bl0p3ig3hvt63jdubil`
-2023-02-26 23:42:49.374  WARN 73544 --- [    Test worker] o.h.t.s.i.ExceptionHandlerLoggedImpl     : GenerationTarget encountered exception accepting command : Error executing DDL &quot;
+2023-03-20 11:04:21.447  WARN 77266 --- [    Test worker] o.h.t.s.i.ExceptionHandlerLoggedImpl     : GenerationTarget encountered exception accepting command : Error executing DDL &quot;
     alter table `tb_diary_stamp` 
        drop 
        foreign key `FKqd0450bl0p3ig3hvt63jdubil`&quot; via JDBC Statement
@@ -774,7 +783,7 @@ Caused by: org.h2.jdbc.JdbcSQLSyntaxErrorException: Table &quot;TB_DIARY_STAMP&q
 	at org.hibernate.tool.schema.internal.exec.GenerationTargetToDatabase.accept(GenerationTargetToDatabase.java:54) ~[hibernate-core-5.6.14.Final.jar:5.6.14.Final]
 	... 114 common frames omitted
 
-2023-02-26 23:42:49.375 DEBUG 73544 --- [    Test worker] org.hibernate.SQL                        : 
+2023-03-20 11:04:21.452 DEBUG 77266 --- [    Test worker] org.hibernate.SQL                        : 
     
     alter table `tb_pet` 
        drop 
@@ -784,7 +793,7 @@ Hibernate:
     alter table `tb_pet` 
        drop 
        foreign key `FKqq3f2jlutq4re5ulk1xrh1nwu`
-2023-02-26 23:42:49.378  WARN 73544 --- [    Test worker] o.h.t.s.i.ExceptionHandlerLoggedImpl     : GenerationTarget encountered exception accepting command : Error executing DDL &quot;
+2023-03-20 11:04:21.457  WARN 77266 --- [    Test worker] o.h.t.s.i.ExceptionHandlerLoggedImpl     : GenerationTarget encountered exception accepting command : Error executing DDL &quot;
     alter table `tb_pet` 
        drop 
        foreign key `FKqq3f2jlutq4re5ulk1xrh1nwu`&quot; via JDBC Statement
@@ -935,43 +944,43 @@ Caused by: org.h2.jdbc.JdbcSQLSyntaxErrorException: Table &quot;TB_PET&quot; not
 	at org.hibernate.tool.schema.internal.exec.GenerationTargetToDatabase.accept(GenerationTargetToDatabase.java:54) ~[hibernate-core-5.6.14.Final.jar:5.6.14.Final]
 	... 114 common frames omitted
 
-2023-02-26 23:42:49.379 DEBUG 73544 --- [    Test worker] org.hibernate.SQL                        : 
+2023-03-20 11:04:21.459 DEBUG 77266 --- [    Test worker] org.hibernate.SQL                        : 
     
     drop table if exists `tb_diary`
 Hibernate: 
     
     drop table if exists `tb_diary`
-2023-02-26 23:42:49.379 DEBUG 73544 --- [    Test worker] org.hibernate.SQL                        : 
+2023-03-20 11:04:21.462 DEBUG 77266 --- [    Test worker] org.hibernate.SQL                        : 
     
     drop table if exists `tb_diary_stamp`
 Hibernate: 
     
     drop table if exists `tb_diary_stamp`
-2023-02-26 23:42:49.380 DEBUG 73544 --- [    Test worker] org.hibernate.SQL                        : 
+2023-03-20 11:04:21.463 DEBUG 77266 --- [    Test worker] org.hibernate.SQL                        : 
     
     drop table if exists `tb_member`
 Hibernate: 
     
     drop table if exists `tb_member`
-2023-02-26 23:42:49.380 DEBUG 73544 --- [    Test worker] org.hibernate.SQL                        : 
+2023-03-20 11:04:21.463 DEBUG 77266 --- [    Test worker] org.hibernate.SQL                        : 
     
     drop table if exists `tb_pet`
 Hibernate: 
     
     drop table if exists `tb_pet`
-2023-02-26 23:42:49.380 DEBUG 73544 --- [    Test worker] org.hibernate.SQL                        : 
+2023-03-20 11:04:21.463 DEBUG 77266 --- [    Test worker] org.hibernate.SQL                        : 
     
     drop table if exists `tb_stamp`
 Hibernate: 
     
     drop table if exists `tb_stamp`
-2023-02-26 23:42:49.380 DEBUG 73544 --- [    Test worker] org.hibernate.SQL                        : 
+2023-03-20 11:04:21.463 DEBUG 77266 --- [    Test worker] org.hibernate.SQL                        : 
     
     drop table if exists `tb_user`
 Hibernate: 
     
     drop table if exists `tb_user`
-2023-02-26 23:42:49.382 DEBUG 73544 --- [    Test worker] org.hibernate.SQL                        : 
+2023-03-20 11:04:21.467 DEBUG 77266 --- [    Test worker] org.hibernate.SQL                        : 
     
     create table `tb_diary` (
        `diary_id` bigint not null auto_increment,
@@ -995,7 +1004,7 @@ Hibernate:
         `pet_id` bigint,
         primary key (`diary_id`)
     ) engine=InnoDB
-2023-02-26 23:42:49.383 DEBUG 73544 --- [    Test worker] org.hibernate.SQL                        : 
+2023-03-20 11:04:21.483 DEBUG 77266 --- [    Test worker] org.hibernate.SQL                        : 
     
     create table `tb_diary_stamp` (
        `diary_stamp_id` bigint not null auto_increment,
@@ -1011,7 +1020,7 @@ Hibernate:
         `stamp_id` bigint,
         primary key (`diary_stamp_id`)
     ) engine=InnoDB
-2023-02-26 23:42:49.385 DEBUG 73544 --- [    Test worker] org.hibernate.SQL                        : 
+2023-03-20 11:04:21.485 DEBUG 77266 --- [    Test worker] org.hibernate.SQL                        : 
     
     create table `tb_member` (
        `id` bigint not null auto_increment,
@@ -1029,7 +1038,7 @@ Hibernate:
         `year` integer,
         primary key (`id`)
     ) engine=InnoDB
-2023-02-26 23:42:49.386 DEBUG 73544 --- [    Test worker] org.hibernate.SQL                        : 
+2023-03-20 11:04:21.487 DEBUG 77266 --- [    Test worker] org.hibernate.SQL                        : 
     
     create table `tb_pet` (
        `pet_id` bigint not null auto_increment,
@@ -1049,7 +1058,7 @@ Hibernate:
         `member_id` bigint,
         primary key (`pet_id`)
     ) engine=InnoDB
-2023-02-26 23:42:49.386 DEBUG 73544 --- [    Test worker] org.hibernate.SQL                        : 
+2023-03-20 11:04:21.496 DEBUG 77266 --- [    Test worker] org.hibernate.SQL                        : 
     
     create table `tb_stamp` (
        `stamp_id` bigint not null auto_increment,
@@ -1063,7 +1072,7 @@ Hibernate:
         `stamp_type` integer,
         primary key (`stamp_id`)
     ) engine=InnoDB
-2023-02-26 23:42:49.387 DEBUG 73544 --- [    Test worker] org.hibernate.SQL                        : 
+2023-03-20 11:04:21.499 DEBUG 77266 --- [    Test worker] org.hibernate.SQL                        : 
     
     create table `tb_user` (
        `member_id` bigint not null auto_increment,
@@ -1079,7 +1088,7 @@ Hibernate:
         `username` varchar(255),
         primary key (`member_id`)
     ) engine=InnoDB
-2023-02-26 23:42:49.388 DEBUG 73544 --- [    Test worker] org.hibernate.SQL                        : 
+2023-03-20 11:04:21.502 DEBUG 77266 --- [    Test worker] org.hibernate.SQL                        : 
     
     alter table `tb_diary` 
        add constraint `FKiwhbik4vl1tgregne3nwrjs46` 
@@ -1091,7 +1100,7 @@ Hibernate:
        add constraint `FKiwhbik4vl1tgregne3nwrjs46` 
        foreign key (`member_id`) 
        references `tb_user` (`member_id`)
-2023-02-26 23:42:49.389 DEBUG 73544 --- [    Test worker] org.hibernate.SQL                        : 
+2023-03-20 11:04:21.522 DEBUG 77266 --- [    Test worker] org.hibernate.SQL                        : 
     
     alter table `tb_diary` 
        add constraint `FKqdly2nrm5yggn93xti638jrc0` 
@@ -1103,7 +1112,7 @@ Hibernate:
        add constraint `FKqdly2nrm5yggn93xti638jrc0` 
        foreign key (`pet_id`) 
        references `tb_pet` (`pet_id`)
-2023-02-26 23:42:49.389 DEBUG 73544 --- [    Test worker] org.hibernate.SQL                        : 
+2023-03-20 11:04:21.525 DEBUG 77266 --- [    Test worker] org.hibernate.SQL                        : 
     
     alter table `tb_diary_stamp` 
        add constraint `FKrmkuol08tw5hvywpu3kh98yk2` 
@@ -1115,7 +1124,7 @@ Hibernate:
        add constraint `FKrmkuol08tw5hvywpu3kh98yk2` 
        foreign key (`diary_id`) 
        references `tb_diary` (`diary_id`)
-2023-02-26 23:42:49.390 DEBUG 73544 --- [    Test worker] org.hibernate.SQL                        : 
+2023-03-20 11:04:21.526 DEBUG 77266 --- [    Test worker] org.hibernate.SQL                        : 
     
     alter table `tb_diary_stamp` 
        add constraint `FKqd0450bl0p3ig3hvt63jdubil` 
@@ -1127,7 +1136,7 @@ Hibernate:
        add constraint `FKqd0450bl0p3ig3hvt63jdubil` 
        foreign key (`stamp_id`) 
        references `tb_stamp` (`stamp_id`)
-2023-02-26 23:42:49.391 DEBUG 73544 --- [    Test worker] org.hibernate.SQL                        : 
+2023-03-20 11:04:21.527 DEBUG 77266 --- [    Test worker] org.hibernate.SQL                        : 
     
     alter table `tb_pet` 
        add constraint `FKqq3f2jlutq4re5ulk1xrh1nwu` 
@@ -1139,15 +1148,15 @@ Hibernate:
        add constraint `FKqq3f2jlutq4re5ulk1xrh1nwu` 
        foreign key (`member_id`) 
        references `tb_user` (`member_id`)
-2023-02-26 23:42:49.392  INFO 73544 --- [    Test worker] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
-2023-02-26 23:42:49.392  INFO 73544 --- [    Test worker] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
-2023-02-26 23:42:49.478  WARN 73544 --- [    Test worker] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
-2023-02-26 23:42:49.530  INFO 73544 --- [    Test worker] o.s.b.a.h2.H2ConsoleAutoConfiguration    : H2 console available at '/h2-console'. Database available at 'jdbc:h2:mem:new-test-db'
-2023-02-26 23:42:49.656  INFO 73544 --- [    Test worker] o.s.b.t.m.w.SpringBootMockServletContext : Initializing Spring TestDispatcherServlet ''
-2023-02-26 23:42:49.656  INFO 73544 --- [    Test worker] o.s.t.web.servlet.TestDispatcherServlet  : Initializing Servlet ''
-2023-02-26 23:42:49.657  INFO 73544 --- [    Test worker] o.s.t.web.servlet.TestDispatcherServlet  : Completed initialization in 0 ms
-2023-02-26 23:42:49.665  INFO 73544 --- [    Test worker] c.e.jenkinstest.UserControllerTest       : Started UserControllerTest in 0.496 seconds (JVM running for 3.82)
-2023-02-26 23:42:49.685 DEBUG 73544 --- [    Test worker] org.hibernate.SQL                        : 
+2023-03-20 11:04:21.531  INFO 77266 --- [    Test worker] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2023-03-20 11:04:21.538  INFO 77266 --- [    Test worker] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2023-03-20 11:04:22.073  WARN 77266 --- [    Test worker] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2023-03-20 11:04:22.214  INFO 77266 --- [    Test worker] o.s.b.a.h2.H2ConsoleAutoConfiguration    : H2 console available at '/h2-console'. Database available at 'jdbc:h2:mem:new-test-db'
+2023-03-20 11:04:22.393  INFO 77266 --- [    Test worker] o.s.b.t.m.w.SpringBootMockServletContext : Initializing Spring TestDispatcherServlet ''
+2023-03-20 11:04:22.393  INFO 77266 --- [    Test worker] o.s.t.web.servlet.TestDispatcherServlet  : Initializing Servlet ''
+2023-03-20 11:04:22.394  INFO 77266 --- [    Test worker] o.s.t.web.servlet.TestDispatcherServlet  : Completed initialization in 1 ms
+2023-03-20 11:04:22.408  INFO 77266 --- [    Test worker] c.e.jenkinstest.UserControllerTest       : Started UserControllerTest in 2.824 seconds (JVM running for 3.539)
+2023-03-20 11:04:22.454 DEBUG 77266 --- [    Test worker] org.hibernate.SQL                        : 
     insert 
     into
         `
@@ -1165,7 +1174,7 @@ Hibernate:
         ) 
     values
         (?, ?, ?)
-2023-02-26 23:42:49.832 DEBUG 73544 --- [    Test worker] org.hibernate.SQL                        : 
+2023-03-20 11:04:22.621 DEBUG 77266 --- [    Test worker] org.hibernate.SQL                        : 
     select
         member0_.`id` as id1_2_,
         member0_.`grade` as grade2_2_,
@@ -1222,7 +1231,7 @@ MockHttpServletResponse:
     Forwarded URL = null
    Redirected URL = null
           Cookies = []
-2023-02-26 23:42:49.954 DEBUG 73544 --- [    Test worker] org.hibernate.SQL                        : 
+2023-03-20 11:04:22.780 DEBUG 77266 --- [    Test worker] org.hibernate.SQL                        : 
     insert 
     into
         `
@@ -1281,7 +1290,7 @@ MockHttpServletResponse:
     Forwarded URL = null
    Redirected URL = null
           Cookies = []
-2023-02-26 23:42:49.964 DEBUG 73544 --- [    Test worker] org.hibernate.SQL                        : 
+2023-03-20 11:04:22.803 DEBUG 77266 --- [    Test worker] org.hibernate.SQL                        : 
     select
         member0_.`id` as id1_2_,
         member0_.`grade` as grade2_2_,
@@ -1301,7 +1310,7 @@ Hibernate:
         `tb_member` member0_ 
     where
         member0_.`name`=?
-2023-02-26 23:42:49.969 DEBUG 73544 --- [    Test worker] org.hibernate.SQL                        : 
+2023-03-20 11:04:22.812 DEBUG 77266 --- [    Test worker] org.hibernate.SQL                        : 
     update
         `tb_member` 
     set
@@ -1356,7 +1365,7 @@ MockHttpServletResponse:
     Forwarded URL = null
    Redirected URL = null
           Cookies = []
-2023-02-26 23:42:49.981 DEBUG 73544 --- [    Test worker] org.hibernate.SQL                        : 
+2023-03-20 11:04:22.840 DEBUG 77266 --- [    Test worker] org.hibernate.SQL                        : 
     select
         member0_.`id` as id1_2_,
         member0_.`grade` as grade2_2_,
@@ -1409,7 +1418,7 @@ MockHttpServletResponse:
     Forwarded URL = null
    Redirected URL = null
           Cookies = []
-2023-02-26 23:42:49.989 DEBUG 73544 --- [    Test worker] org.hibernate.SQL                        : 
+2023-03-20 11:04:22.859 DEBUG 77266 --- [    Test worker] org.hibernate.SQL                        : 
     select
         member0_.`id` as id1_2_,
         member0_.`grade` as grade2_2_,
@@ -1429,7 +1438,7 @@ Hibernate:
         `tb_member` member0_ 
     where
         member0_.`name`=?
-2023-02-26 23:42:49.993 DEBUG 73544 --- [    Test worker] org.hibernate.SQL                        : 
+2023-03-20 11:04:22.870 DEBUG 77266 --- [    Test worker] org.hibernate.SQL                        : 
     delete 
     from
         `tb_member` 
@@ -1489,7 +1498,7 @@ MockHttpServletResponse:
 <input id="line-wrapping-toggle" type="checkbox" autocomplete="off"/>
 </label>
 </div>Generated by 
-<a href="http://www.gradle.org">Gradle 7.6</a> at 2023. 2. 26. 오후 11:42:50</p>
+<a href="http://www.gradle.org">Gradle 7.6</a> at 2023. 3. 20. 오전 11:04:23</p>
 </div>
 </div>
 </body>

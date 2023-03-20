@@ -1,4 +1,5 @@
 spring:
+  profiles.active: dev
   jpa:
     hibernate:
       ddl-auto: update
@@ -14,7 +15,24 @@ spring:
 logging.level:
   org.hibernate.SQL: debug
 
+---
 
+spring:
+  config.activate.on-profile: prod
+#  datasource:
+#    driver-class-name: com.mysql.cj.jdbc.Driver
+#    url: ${db_url}
+#    username: ${db_username}
+#    password: ${db_password}
+
+---
+
+spring:
+  config.activate.on-profile: dev
+  datasource:
+    url: jdbc:mysql://127.0.0.1:3306/jenkins-test-2?serverTimezone=UTC&characterEncoding=UTF-8&useSSL=false&allowPublicKeyRetrieval=true
+    username: admin
+    password: admin
 
 
 #spring:
